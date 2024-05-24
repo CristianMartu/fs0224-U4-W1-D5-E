@@ -15,6 +15,10 @@ public class MultimediaVideo extends Multimedia implements Volume, Brightness {
         this.brightness = brightness;
     }
 
+    public MultimediaVideo(String title) {
+        this(title, 5, 5, 5);
+    }
+
     public void play() {
 
     }
@@ -37,5 +41,13 @@ public class MultimediaVideo extends Multimedia implements Volume, Brightness {
     @Override
     public void downVolume() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "MultimediaVideo{" +
+                "title='" + title + '\'' +
+                ", duration=" + duration +
+                '}';
     }
 }

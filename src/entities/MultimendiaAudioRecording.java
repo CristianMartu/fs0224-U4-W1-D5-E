@@ -11,7 +11,11 @@ public class MultimendiaAudioRecording extends Multimedia implements Volume {
         this.duration = duration;
         this.volume = volume;
     }
-    
+
+    public MultimendiaAudioRecording(String title) {
+        this(title, 5, 5);
+    }
+
     public void play() {
 
     }
@@ -24,5 +28,13 @@ public class MultimendiaAudioRecording extends Multimedia implements Volume {
     @Override
     public void downVolume() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "MultimendiaAudioRecording{" +
+                "title='" + title + '\'' +
+                ", duration=" + duration +
+                '}';
     }
 }

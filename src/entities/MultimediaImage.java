@@ -10,6 +10,10 @@ public class MultimediaImage extends Multimedia implements Brightness {
         this.brightness = brightness;
     }
 
+    public MultimediaImage(String title) {
+        this(title, 5);
+    }
+
     public void show() {
 
     }
@@ -22,5 +26,12 @@ public class MultimediaImage extends Multimedia implements Brightness {
     @Override
     public void downBrightness() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "MultimediaImage{" +
+                "title='" + title + '\'' +
+                '}';
     }
 }
