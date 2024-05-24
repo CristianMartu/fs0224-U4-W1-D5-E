@@ -4,7 +4,7 @@ import interfaces.Brightness;
 import interfaces.Reproducible;
 
 public class MultimediaVideo extends Multimedia implements Reproducible, Brightness {
-    private int duration;
+    private final int duration;
     private int volume;
     private int brightness;
 

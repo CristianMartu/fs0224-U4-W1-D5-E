@@ -3,7 +3,7 @@ package entities;
 import interfaces.Reproducible;
 
 public class MultimendiaAudioRecording extends Multimedia implements Reproducible {
-    private int duration;
+    private final int duration;
     private int volume;
 
     public MultimendiaAudioRecording(String title, int duration, int volume) {
