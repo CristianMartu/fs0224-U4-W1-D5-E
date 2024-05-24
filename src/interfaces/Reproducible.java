@@ -1,6 +1,8 @@
 package interfaces;
 
-public interface Volume {
+public interface Reproducible {
+    void play();
+
     void upVolume();
 
     void downVolume();

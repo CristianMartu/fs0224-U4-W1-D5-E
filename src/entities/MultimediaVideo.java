@@ -1,9 +1,9 @@
 package entities;
 
 import interfaces.Brightness;
-import interfaces.Volume;
+import interfaces.Reproducible;
 
-public class MultimediaVideo extends Multimedia implements Volume, Brightness {
+public class MultimediaVideo extends Multimedia implements Reproducible, Brightness {
     private int duration;
     private int volume;
     private int brightness;
@@ -15,32 +15,47 @@ public class MultimediaVideo extends Multimedia implements Volume, Brightness {
         this.brightness = brightness;
     }
 
-    public MultimediaVideo(String title) {
-        this(title, 5, 5, 5);
+    public MultimediaVideo(String title, int duration) {
+        this(title, duration, 5, 5);
     }
 
-    public void play() {
-
-    }
 
     @Override
     public void upBrightness() {
-
+        if (brightness < 10) brightness++;
+        System.out.println(title + " luminosità: " + brightness);
     }
 
     @Override
     public void downBrightness() {
+        if (brightness > 0) brightness--;
+        System.out.println(title + " luminosità: " + brightness);
+    }
 
+    @Override
+    public void play() {
+        for (int i = 0; i < duration; i++) {
+            System.out.print("Video: " + title);
+            for (int j = 0; j < volume; j++) {
+                System.out.print("!");
+            }
+            for (int j = 0; j < brightness; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 
     @Override
     public void upVolume() {
-
+        if (volume < 10) volume++;
+        System.out.println(title + " volume: " + volume);
     }
 
     @Override
     public void downVolume() {
-
+        if (volume > 0) volume--;
+        System.out.println(title + " volume: " + volume);
     }
 
     @Override
