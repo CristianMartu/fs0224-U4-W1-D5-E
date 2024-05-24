@@ -1,7 +1,7 @@
 import entities.Multimedia;
 import entities.MultimediaImage;
 import entities.MultimediaVideo;
-import entities.MultimendiaAudioRecording;
+import entities.MultimendiaAudio;
 import interfaces.Reproducible;
 
 import java.util.Arrays;
@@ -32,7 +32,7 @@ public class Main {
                     elements[i] = new MultimediaImage(title);
                     break;
                 case 2:
-                    elements[i] = new MultimendiaAudioRecording(title, duration);
+                    elements[i] = new MultimendiaAudio(title, duration);
                     break;
                 case 3:
                     elements[i] = new MultimediaVideo(title, duration);

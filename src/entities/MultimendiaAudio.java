@@ -2,17 +2,17 @@ package entities;
 
 import interfaces.Reproducible;
 
-public class MultimendiaAudioRecording extends Multimedia implements Reproducible {
+public class MultimendiaAudio extends Multimedia implements Reproducible {
     private final int duration;
     private int volume;
 
-    public MultimendiaAudioRecording(String title, int duration, int volume) {
+    public MultimendiaAudio(String title, int duration, int volume) {
         super(title);
         this.duration = duration;
         this.volume = volume;
     }
 
-    public MultimendiaAudioRecording(String title, int duration) {
+    public MultimendiaAudio(String title, int duration) {
         this(title, duration, 5);
     }
 
