@@ -14,11 +14,11 @@ public class Main {
         int duration = 5;
         System.out.println("Inserisci cinque elementi multimediali:");
         for (int i = 0; i < elements.length; i++) {
-            System.out.println("    Elemento multimediale");
-            System.out.println("        inserire 1 se immagine");
-            System.out.println("        inserire 2 se audio");
-            System.out.println("        inserire 3 se video");
-            System.out.print("        numero: ");
+            System.out.print("    Elemento multimediale \n" +
+                    "       inserire 1 se immagine \n" +
+                    "       inserire 2 se audio \n" +
+                    "       inserire 3 se video \n" +
+                    "       numero: ");
             int type = Integer.parseInt(scanner.nextLine());
             System.out.print("    Titolo: ");
             String title = scanner.nextLine();
@@ -38,8 +38,8 @@ public class Main {
                     elements[i] = new MultimediaVideo(title, duration);
                     break;
                 default:
-                    System.out.println("Errore: inserire un numero da 1 a 3");
-                    System.out.println("    Inserito default: 1");
+                    System.out.println("Errore: inserire un numero da 1 a 3 \n" +
+                            "   Inserito default: 1");
                     elements[i] = new MultimediaImage(title);
             }
             System.out.println("    " + elements[i] + "\n");
@@ -50,8 +50,7 @@ public class Main {
         int num;
         System.out.println("Esegui file multimediali");
         do {
-            System.out.println();
-            System.out.print("inserire un numero da 1 a 5 oppure 0 per terminare: ");
+            System.out.print("\ninserire un numero da 1 a 5 oppure 0 per terminare: ");
             num = Integer.parseInt(scanner.nextLine());
             switch (num) {
                 case 0:
